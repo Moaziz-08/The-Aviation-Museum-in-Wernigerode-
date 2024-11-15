@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+header .logo h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #2a5298;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.highlight:hover {
+    transform: translateY(-10px);
+}
+
+.highlight h3 {
+    font-size: 1.5rem;
+    color: #2a5298;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer {
+    background-color: #2a5298;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .visit-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.footer .visit-button:hover {
+    background-color: #d15f55;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .highlight {
+        margin: 10px 0;
+    }
+}
