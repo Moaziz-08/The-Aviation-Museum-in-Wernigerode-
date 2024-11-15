@@ -3,149 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviation Museum in Wernigerode</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Aviation Museum Wernigerode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
+        /* Reset all default styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
+
         body {
-            background: #f7f9fc;
+            background-color: #f1f1f1;
             color: #333;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
-        /* Header Section */
+        /* Hero Section */
         header {
-            background: url('https://via.placeholder.com/1920x800/003366/ffffff?text=Aviation+Museum') no-repeat center center/cover;
-            color: #fff;
-            padding: 100px 20px;
-            text-align: center;
             position: relative;
+            background: url('https://via.placeholder.com/1920x1080/003366/ffffff?text=Aviation+Museum') no-repeat center center/cover;
             height: 100vh;
-            overflow: hidden;
+            text-align: center;
+            color: white;
+            padding-top: 10%;
+            z-index: 0;
         }
+
         header h1 {
+            font-size: 4.5rem;
             font-family: 'Playfair Display', serif;
-            font-size: 4rem;
             font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
         }
+
         header p {
-            font-size: 1.4rem;
-            margin-top: 20px;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
             opacity: 0.9;
-            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+            letter-spacing: 1px;
         }
+
         .scroll-down {
             position: absolute;
-            bottom: 30px;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.2rem;
-            color: #fff;
+            color: white;
+            font-weight: bold;
             cursor: pointer;
-            animation: bounce 1s infinite;
+            animation: bounce 1s ease-in-out infinite;
         }
+
         @keyframes bounce {
             0% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
         }
 
-        /* Main Section */
+        /* Content Section */
         .content {
-            max-width: 1100px;
-            margin: -60px auto 60px;
-            padding: 40px;
-            background: #fff;
+            max-width: 1200px;
+            margin: -60px auto;
+            background-color: white;
+            padding: 60px;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             z-index: 1;
             position: relative;
         }
+
         h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
             color: #003366;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-family: 'Playfair Display', serif;
         }
+
         p {
             font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            line-height: 1.8;
         }
+
         .highlight {
-            background-color: #e8f1ff;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: #f5f8fd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 20px;
         }
 
         /* Parallax Section */
         .parallax {
             background: url('https://via.placeholder.com/1920x800/000000/ffffff?text=Explore+Rare+Planes') no-repeat center center/cover;
             height: 500px;
-            position: relative;
             background-attachment: fixed;
-            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Playfair Display', serif;
+            color: white;
             text-align: center;
-        }
-        .parallax h2 {
             font-size: 3rem;
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         }
 
         /* Image Gallery */
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            display: flex;
             gap: 30px;
-            margin-top: 30px;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        /* Call to Action Section */
+        .gallery img {
+            width: 33%;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Call to Action Button */
         .cta {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 60px;
         }
+
         .cta a {
-            background: #003366;
-            color: #fff;
-            padding: 15px 40px;
-            font-size: 1.3rem;
+            background-color: #003366;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.5rem;
             text-decoration: none;
             border-radius: 8px;
-            transition: background 0.3s ease;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
         }
+
         .cta a:hover {
-            background: #002244;
+            background-color: #002244;
         }
 
         /* Footer Section */
         footer {
             background-color: #003366;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 20px;
             font-size: 0.9rem;
@@ -155,33 +173,33 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Hero Section -->
     <header>
-        <h1>Aviation Museum in Wernigerode</h1>
-        <p>Experience the Thrill of Flight</p>
+        <h1>Aviation Museum Wernigerode</h1>
+        <p>Discover the wonders of aviation with over 50 real planes & helicopters!</p>
         <div class="scroll-down">↓ Scroll Down</div>
     </header>
 
     <!-- Main Content Section -->
     <section class="content">
-        <h2>Discover the Fascinating World of Aviation</h2>
-        <p>Explore more than 50 real planes and helicopters, admire unique pilot helmets, engines, and cockpit models. The spacious halls allow you to get up close to the aircraft and even sit in a cockpit!</p>
+        <h2>Explore the Fascinating World of Aviation</h2>
+        <p>Experience over 50 real aircraft, from military jets to civilian helicopters. The museum features authentic pilot helmets, engine models, and cockpit replicas that bring aviation history to life.</p>
         
-        <div class="highlight">Feel the thrill of being a pilot – experience it firsthand!</div>
+        <div class="highlight">Sit inside real planes and get a feel for what it's like to be a pilot!</div>
 
         <h2>Flight Simulator</h2>
-        <p>Take control of a plane or helicopter in the museum's flight simulator. After your flight, receive a special certificate to commemorate the experience.</p>
+        <p>Feel the thrill of flying with our state-of-the-art flight simulator. After your flight, receive a personalized certificate to commemorate your adventure!</p>
 
         <h2>Rare Aircraft Collection</h2>
-        <p>The museum features rare aircraft, including a jet flown by Prince Charles and a royal helicopter. Explore these fascinating pieces of history while using the museum's audioguide.</p>
+        <p>See rare planes such as the jet flown by Prince Charles and a royal helicopter. The museum’s audioguide will take you through incredible aviation stories!</p>
 
-        <h2>Perfect for Families</h2>
-        <p>Bring your family to the museum for an educational and fun experience. Kids will love exploring the planes, and the friendly staff is happy to assist with any questions!</p>
+        <h2>Family Fun</h2>
+        <p>The Aviation Museum is perfect for families! Kids can explore and learn while having fun in a safe and educational environment.</p>
     </section>
 
     <!-- Parallax Section -->
     <section class="parallax">
-        <h2>Explore Rare and Unique Aircraft</h2>
+        Explore Rare and Unique Aircraft
     </section>
 
     <!-- Image Gallery Section -->
@@ -193,7 +211,12 @@
             <img src="plane3.jpeg" alt="Plane 3">
         </div>
     </section>
-    
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <a href="#">Plan Your Visit Now</a>
+    </section>
+
     <!-- Footer Section -->
     <footer>
         © 2024 Aviation Museum Wernigerode. All Rights Reserved.
