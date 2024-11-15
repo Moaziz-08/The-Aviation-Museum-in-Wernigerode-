@@ -5,119 +5,132 @@
     box-sizing: border-box;
 }
 
+/* Apply global font */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f1f1f1;
+    background-color: #f8f9fa;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Hero Section */
+/* Container to fit the A4 size */
+.container {
+    width: 210mm;  /* A4 width */
+    height: 297mm; /* A4 height */
+    padding: 20mm;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Hero section */
 .hero {
     background-image: url('plane1.jpeg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-/* Main Content */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #1e3c72;
+    height: 200px;
+    border-radius: 12px;
+    position: relative;
     margin-bottom: 20px;
 }
 
-p {
+.hero-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
     font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* General section styling */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
     color: #555;
     line-height: 1.8;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Highlights Section */
-.highlights {
-    background-color: #fff;
-    padding: 60px 20px;
-}
-
+/* Key Highlights section */
 .highlight {
-    display: inline-block;
-    width: 30%;
-    margin: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.highlight:hover {
-    transform: translateY(-10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .highlight h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #1e3c72;
     margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
 }
 
-/* Family Section */
-.family {
-    background-color: #f8f8f8;
-    padding: 60px 20px;
-}
-
-.family-img {
+.highlight-img {
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    height: auto;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer Section */
+/* Footer section */
 .footer {
     background-color: #1e3c72;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .cta-button {
     background-color: #ff6f61;
     color: white;
-    padding: 15px 25px;
-    font-size: 1.2rem;
+    padding: 12px 20px;
+    font-size: 1rem;
     text-decoration: none;
-    border-radius: 50px;
-    margin-top: 20px;
+    border-radius: 30px;
+    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -125,22 +138,27 @@ img {
     background-color: #e25a4a;
 }
 
-/* Responsive Design */
+/* Mobile-responsive adjustments */
 @media (max-width: 768px) {
-    .highlight {
+    .container {
         width: 100%;
-        margin: 20px 0;
+        height: auto;
+        padding: 15mm;
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
-    .container {
-        width: 90%;
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 }
