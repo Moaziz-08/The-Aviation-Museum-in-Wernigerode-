@@ -1,0 +1,98 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f4;
+  }
+  
+  .brochure {
+    width: 280mm;
+    height: 220mm; /* A4 Landscape dimensions */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  /* Header section */
+  .header {
+    text-align: center;
+    background: linear-gradient(135deg, #004aad, #0077b6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* Content section */
+  .content {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .left-column {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .feature {
+    background: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .feature img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    color: #004aad;
+  }
+  
+  .feature p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  /* Footer section */
+  .footer {
+    text-align: center;
+    background: #004aad;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: auto;
+    font-size: 1.1rem;
+  }
+  
